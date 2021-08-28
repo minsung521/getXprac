@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_prac/src/home.dart';
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({Key? key}) : super(key: key);
+class SecondNamedPage extends StatelessWidget {
+  const SecondNamedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SecondPage extends StatelessWidget {
                     // Navigator.of(context)
                     //     .push(MaterialPageRoute(builder: (_) => FirstPage()));
                     // Get.to(Home());
-                    Get.offAll(Home());
+                    Get.offAllNamed("/");
                     // Navigator.of(context).pushAndRemoveUntil(
                     //     MaterialPageRoute(builder: (_) => Home()),
                     //     (route) => false);

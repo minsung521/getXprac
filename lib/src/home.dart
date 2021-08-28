@@ -19,11 +19,45 @@ class Home extends StatelessWidget {
                   onPressed: () {
                     // Navigator.of(context)
                     //     .push(MaterialPageRoute(builder: (_) => FirstPage()));
-                    Get.to(FirstPage());
+                    // Get.to(FirstPage());
                   },
-                  child: Text("일반적인 라우트"))
+                  child: Text("일반적인 라우트")),
+              ElevatedButton(
+                  onPressed: () {
+                    // Navigator.of(context)
+                    //     .push(MaterialPageRoute(builder: (_) => FirstPage()));
+                    // Get.to(FirstPage());
+                    Get.toNamed("/first");
+                  },
+                  child: Text("Named 라우트")),
+              ElevatedButton(
+                  onPressed: () {
+                    // Navigator.of(context)
+                    //     .push(MaterialPageRoute(builder: (_) => FirstPage()));
+                    // Get.to(FirstPage());
+                    Get.toNamed("/next",
+                        arguments: User(
+                          "민성",
+                          17,
+                        ));
+                  },
+                  child: Text("Arguments 전달")),
+              ElevatedButton(
+                  onPressed: () {
+                    // Navigator.of(context)
+                    //     .push(MaterialPageRoute(builder: (_) => FirstPage()));
+                    // Get.to(FirstPage());
+                    Get.toNamed("/user/23213/?name=김민성&age=17");
+                  },
+                  child: Text("동적 URL 전달"))
             ],
           ),
         ));
   }
+}
+
+class User {
+  String name;
+  int age;
+  User(this.name, this.age);
 }
